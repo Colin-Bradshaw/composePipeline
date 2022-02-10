@@ -19,8 +19,9 @@ services:
     ports:
       - "8083:8083"
     environment:
-      - UTOPIA_DB_UNAME='root'
-      - DB_LOC=jdbc:mysql://18.118.155.146:3306/utopia
+      - UTOPIA_DB_UNAME="${UTOPIA_DB_UNAME}"
+      - UTOPIA_DB_PASS="${UTOPIA_DB_PASS}"
+      - DB_LOC="${DB_LOC}"
     networks:
       - utopia_nw
         
@@ -32,8 +33,9 @@ services:
     ports:
       - "8081:8081"
     environment:
-      - UTOPIA_DB_UNAME='root'
-      - DB_LOC=jdbc:mysql://18.118.155.146:3306/utopia
+      - UTOPIA_DB_UNAME="${UTOPIA_DB_UNAME}"
+      - UTOPIA_DB_PASS="${UTOPIA_DB_PASS}"
+      - DB_LOC="${DB_LOC}"
     networks:
       - utopia_nw
         
@@ -45,8 +47,9 @@ services:
     ports:
       - "8082:8082"
     environment:
-      - UTOPIA_DB_UNAME='root'
-      - DB_LOC=jdbc:mysql://18.118.155.146:3306/utopia
+      - UTOPIA_DB_UNAME="${UTOPIA_DB_UNAME}"
+      - UTOPIA_DB_PASS="${UTOPIA_DB_PASS}"
+      - DB_LOC="${DB_LOC}"
     networks:
         - utopia_nw
         
