@@ -5,7 +5,7 @@ services:
       test: "mysqladmin ping --silent"
       interval: "5s"
     ports:
-      - "3306:3306"
+      - "3307:3307"
     security_opt:
     - seccomp:unconfined
     networks:
