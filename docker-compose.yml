@@ -19,7 +19,7 @@ services:
     ports:
       - "8083:8083"
     environment:
-      - DB_LOC=jdbc:mysql://MySQL:3306/utopia
+      - DB_LOC=jdbc:mysql://18.118.155.146:3306/utopia
     networks:
       - utopia_nw
         
@@ -31,7 +31,7 @@ services:
     ports:
       - "8081:8081"
     environment:
-      - DB_LOC=jdbc:mysql://MySQL:3306/utopia
+      - DB_LOC=jdbc:mysql://18.118.155.146:3306/utopia
     networks:
       - utopia_nw
         
@@ -43,7 +43,7 @@ services:
     ports:
       - "8082:8082"
     environment:
-      - DB_LOC=jdbc:mysql://MySQL:3306/utopia
+      - DB_LOC=jdbc:mysql://18.118.155.146:3306/utopia
     networks:
         - utopia_nw
         
