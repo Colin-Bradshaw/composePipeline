@@ -7,9 +7,9 @@ services:
     ports:
       - "8083:8083"
     environment:
-      - UTOPIA_DB_UNAME="${UTOPIA_DB_UNAME}"
-      - UTOPIA_DB_PASS="${UTOPIA_DB_PASS}"
-      - DB_LOC="${DB_LOC}"
+      - UTOPIA_DB_UNAME=admin
+      - UTOPIA_DB_PASS=09132021SmoothStack!
+      - DB_LOC=jdbc:mysql://utopia.cztkke9ur9zz.us-east-2.rds.amazonaws.com:3306/cb-utopia
     networks:
       - utopia_nw
         
@@ -18,9 +18,9 @@ services:
     ports:
       - "8081:8081"
     environment:
-      - UTOPIA_DB_UNAME="${UTOPIA_DB_UNAME}"
-      - UTOPIA_DB_PASS="${UTOPIA_DB_PASS}"
-      - DB_LOC="${DB_LOC}"
+      - UTOPIA_DB_UNAME=admin
+      - UTOPIA_DB_PASS=09132021SmoothStack!
+      - DB_LOC=jdbc:mysql://utopia.cztkke9ur9zz.us-east-2.rds.amazonaws.com:3306/cb-utopia
     networks:
       - utopia_nw
         
@@ -29,9 +29,9 @@ services:
     ports:
       - "8082:8082"
     environment:
-      - UTOPIA_DB_UNAME="${UTOPIA_DB_UNAME}"
-      - UTOPIA_DB_PASS="${UTOPIA_DB_PASS}"
-      - DB_LOC="${DB_LOC}"
+      - UTOPIA_DB_UNAME=admin
+      - UTOPIA_DB_PASS=09132021SmoothStack!
+      - DB_LOC=jdbc:mysql://utopia.cztkke9ur9zz.us-east-2.rds.amazonaws.com:3306/cb-utopia
     networks:
         - utopia_nw
 
