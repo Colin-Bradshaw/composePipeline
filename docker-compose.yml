@@ -1,21 +1,7 @@
 services:
-  MySQL:
-    image: 902316339693.dkr.ecr.us-east-2.amazonaws.com/cb-db:latest
-    healthcheck:
-      test: "mysqladmin ping --silent"
-      interval: "5s"
-    ports:
-      - "3307:3307"
-    security_opt:
-    - seccomp:unconfined
-    networks:
-      - utopia_nw
         
   user:
     image: 902316339693.dkr.ecr.us-east-2.amazonaws.com/cb-users:jenkins-auto-build-users
-    depends_on:
-      MySQL:
-        condition: service_healthy
     ports:
       - "8083:8083"
     environment:
@@ -27,9 +13,6 @@ services:
         
   booking:
     image: 902316339693.dkr.ecr.us-east-2.amazonaws.com/cb-booking:jenkins-auto-build-booking
-    depends_on:
-      MySQL:
-        condition: service_healthy
     ports:
       - "8081:8081"
     environment:
@@ -41,9 +24,6 @@ services:
         
   flight:
     image: 902316339693.dkr.ecr.us-east-2.amazonaws.com/cb-flights:jenkins-auto-build-flights
-    depends_on:
-      MySQL:
-        condition: service_healthy
     ports:
       - "8082:8082"
     environment:
@@ -52,8 +32,6 @@ services:
       - DB_LOC="${DB_LOC}"
     networks:
         - utopia_nw
-        
-
 
 networks:
   utopia_nw:
